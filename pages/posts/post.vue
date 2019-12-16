@@ -1,48 +1,27 @@
 <template>
-  <div class="container">
-    <div>
-      <h1 class="title">
-        demo
-      </h1>
-      <h2 class="subtitle">
-        landing page demo
-      </h2>
+  <div>
+    <ImageBg title="Blog" backgroundUrl='https://images.unsplash.com/photo-1573844077939-8eabe5be728f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80'/>
+    <div class="container mx-auto pt-10 pb-24">
+      <h1>Edtions</h1>
+        <ul class="list-disc list-inside">
+          <li><nuxt-link :to="`/posts/blog`">Blog</nuxt-link></li>
+          <li><nuxt-link :to="`/posts/blog-1`">Blog 1</nuxt-link></li>
+          <li><nuxt-link :to="`/posts/blog-2`">Blog 2</nuxt-link></li>
+      </ul>
     </div>
   </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+import ImageBg from '~/components/ImageBg.vue'
 
 export default {
   components: {
+    ImageBg
   }
 }
 </script>
 
 <style>
-.container {
-  @apply min-h-screen flex justify-center items-center text-center mx-auto;
-}
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
+  li {@apply underline text-xl pb-4;}
 </style>
