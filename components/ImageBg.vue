@@ -4,7 +4,7 @@
     <div class="overlay"></div>
     <div class="flex lg:content-center lg:pt-0 flex-wrap h-screen">
       <div class="container mx-auto px-10 lg:px-0 z-10">
-          <div class="lg:w-1/3 text-white">
+          <div class="lg:w-1/3 text-white" data-aos="fade-up">
             <h4 class="uppercase">{{this.subtitle}}</h4>
             <h1 class="mb-8 mark-bold lg:text-6xl text-5xl leading-none">
              {{this.title}}
@@ -18,6 +18,9 @@
 
 <script>
 export default {
+  mounted() {
+    AOS.init();
+  },
     props: {
       title: {
         type: String,
